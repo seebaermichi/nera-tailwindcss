@@ -1,0 +1,48 @@
+{
+  "name": "nera",
+  "version": "2.0.1",
+  "description": "A simple static site generator",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss build ./assets/css/src/index.css -o ./assets/css/index.css",
+    "lint": "eslint --ignore-path .gitignore .",
+    "preserve": "npm run render",
+    "render": "node index.js",
+    "serve": "http-server ./public",
+    "start": "nodemon -e js,md,pug,yaml,css --ignore public/"
+  },
+  "keywords": [],
+  "author": "“Michael <micha.becker79@gmail.com> (https://github.com/seebaermichi)",
+  "license": "ISC",
+  "engines": {
+    "node": ">=10.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seebaermichi/nera"
+  },
+  "dependencies": {
+    "fs-readdir-recursive": "^1.1.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-github-preamble": "^1.0.0",
+    "markdown-it-meta": "^0.0.1",
+    "ncp": "^2.0.0",
+    "pretty": "^2.0.0",
+    "pug": "^2.0.4",
+    "read-yaml": "^1.1.0",
+    "rimraf": "^2.7.1",
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "acorn": "^6.4.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "http-server": "^0.12.1",
+    "husky": "^2.7.0",
+    "nodemon": "^1.19.4"
+  }
+}
